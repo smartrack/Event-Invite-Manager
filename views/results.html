@@ -1,0 +1,32 @@
+<br/>
+
+<div class="center aligned twelve wide column">
+	
+		<table class="ui table">
+		  <thead>
+			<tr>
+			  <th>#</th>
+			  <th>Name</th>
+			  <th>Attendance</th>
+			  <th>Count</th>
+			  <th>Message</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr ng-repeat="attendee in main.attendeesList track by $index">
+			  <td ng-bind="::($index+1)"></td>
+			  <td ng-bind="::attendee.name"></td>
+			  <td class="center aligned" ng-if="attendee.attendance == 'Yes'">
+				<i class="large green checkmark icon"></i>
+			  </td>
+			  <td class="center aligned" ng-if="attendee.attendance != 'Yes'">
+				<i class="large red remove icon"></i>
+			  </td>
+			  <td ng-bind="::attendee.peopleCount.value"></td>
+			  <td ng-bind="::attendee.message"></td>
+			</tr>
+		  </tbody>
+		</table>
+	
+</div>
+

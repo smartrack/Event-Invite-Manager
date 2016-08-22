@@ -1,0 +1,91 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-csp="" ng-app="HMZEventMgrApp"> <!--<![endif]-->
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Srinidhi 2nd Birthday Invitation</title>
+		
+		<!-- mobile meta -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<!--[if IE]>
+			<link rel="shortcut icon" href="favicon.ico">
+		<![endif]-->
+		<!-- or, set /favicon.ico for IE10 win -->
+
+		<!-- CSS -->		
+		<link rel="stylesheet" type="text/css" class="ui" href="./css/semantic.min.css">
+		<style>
+			body{
+				background-size: cover;
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAADCAYAAABfwxXFAAAAYElEQVQIWwXBQQ6CMBBA0T9tA9IFiVQSwoITmOgC4wGMazWGjfc/AhtqOsN7cr0t1piSfeD0L3zF8RgOjKkg5/vHEKXLyiIVr85xTEodN+Qyv81b5lkCvzYw9StNFEJl7G0OF/5g3J15AAAAAElFTkSuQmCC");
+			}
+		</style>
+
+	</head>
+
+	<body class="main-wrapper">
+		<br/>
+		<h1 class="ui inverted header center aligned dividing">Srinidhi's 2<sup>nd</sup> Birthday Invitation</h1>
+		<!--[if lt IE 8]>
+		    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		<!-- Sidebar -->
+		<!-- Main view for templates -->
+		<div class="ui stackable grid">			
+			<div data-ng-view="" class="centered row"></div>
+		</div>
+	</body>
+
+	<!-- Vendors -->
+	<!-- build:nonangularlibs js/nonangularlibs.js -->
+	<script type="text/javascript" src="js/nonangular/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/nonangular/semantic.min.js"></script>
+	<!-- endbuild -->
+
+	<!-- Angular external libraries for application -->
+	<script type="text/javascript" src="js/angular/angular.js"></script>
+	<script type="text/javascript" src="js/angular/angular-route.min.js"></script>
+	<script type="text/javascript" src="js/angular/angular-sanitize.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+		apiKey: "AIzaSyDW7ziTRY8PjQHLobC0qE5dwlIwgRv8pL8",
+		authDomain: "eventmgr-a237e.firebaseapp.com",
+		databaseURL: "https://eventmgr-a237e.firebaseio.com",
+		storageBucket: "",
+	  };
+	  firebase.initializeApp(config);
+	</script>
+	
+	<!-- Angular components -->
+	<script type="text/javascript" src="app/app.js"></script>
+	<script type="text/javascript" src="app/config.js"></script>
+	<script type="text/javascript" src="components/services/queryService.service.js"></script>
+	<script type="text/javascript" src="components/services/LocalStorage.service.js"></script>
+
+	<!-- Application sections -->
+	<script type="text/javascript" src="app/controller.js"></script>
+	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-80334759-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+	
+    
+</html>

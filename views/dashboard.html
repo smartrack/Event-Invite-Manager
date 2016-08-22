@@ -1,0 +1,57 @@
+<br/>
+
+<div class="left aligned six wide column">
+	<div class="ui raised segment">
+		
+	<div class="ui positive message" ng-if="main.response.success">
+	  <div class="header">
+		Thanks for your input and I appreciate your time
+	  </div>
+	</div>
+	
+   <form name="main.inviteForm" class="ui form hidden" ng-class="{'loading':main.formState == 'loading'}" novalidate ng-if="!main.response.success">
+		 
+		  <div class="field" ng-class="{'error':main.inviteForm.fname.$error.required && main.inviteForm.$submitted}">
+			<label for="fullname">Name</label>
+			<input id="fullname" required type="text" name="fname" placeholder="Full Name" ng-model="main.attendee.name">
+		  </div>
+		  <div class="field" ng-class="{'error':main.inviteForm.attendance.$error.required && main.inviteForm.$submitted}">
+			<label ng-if="main.inviteForm.attendance.$error.required && main.inviteForm.$submitted">Please select yes / no</label>
+			<input type="hidden" name="attendance" required ng-model="main.attendee.attendance"/>
+			<button class="ui button" ng-click="main.attendee.attendance = 'Yes'" ng-class="{'green basic' : !main.attendee.attendance, 'positive' : main.attendee.attendance == 'Yes'}">
+			  <i class="checkmark icon"></i>
+			  Yes! I am attending
+			</button>
+			<button class="ui button" ng-click="main.attendee.attendance = 'No'" ng-class="{'grey basic' : !main.attendee.attendance, 'negative' : main.attendee.attendance == 'No'}">
+			  <i class="remove icon"></i>
+			  No! My dates were blocked
+			</button>
+		  </div>
+		  <div class="field">
+				<label>How many people will be attending in total?</label>
+				<select class="ui simple dropdown item" ng-model="main.attendee.peopleCount" ng-options="option.name for option in main.rangeonetofive track by option.value"></select>
+				
+			</div>		
+			<div class="field">
+			<label for="messagetohost">Your message to host</label>
+			<textarea ng-model="main.attendee.message" rows="2" id="messagetohost"></textarea>
+		  </div>
+		  <div class="ui divider"></div>
+		  <button class="ui green button labeled icon" type="submit" ng-click="main.addAttendee()"><i class="checkmark icon"></i>Save</button>			
+		  <button class="ui button labeled icon" type="reset"><i class="remove icon"></i>Cancel</button>
+		</form>
+	</div>
+	
+</div>
+<div class="six wide column">
+
+  <img src="images/invitation.jpg" />
+
+</div> 
+<div class="twelve wide column">
+ <br/> <br/>	
+  <div class="ui embed" data-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.8446021856726!2d-80.85858477302018!3d35.16049610810339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88569ef5d58bac51%3A0xe3c0f96ed623e17e!2sMarion+Diehl+Park!5e0!3m2!1sen!2sus!4v1467739293375" data-placeholder="images/event_location.png">
+	</div>
+
+</div> 
+
